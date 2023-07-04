@@ -37,7 +37,9 @@ os.makedirs("jsons", exist_ok=True)
 
 for index, row in combined_table.iterrows():
     data = row.to_dict()
-    filename = f"jsons/{data[list(data.keys())[0]]}.json"
+    plugin_name = data[list(data.keys())[0]]
+    plugin_name = plugin_name.replace('/', '_')
+    filename = f"jsons/{plugin_name}.json"
     with open(filename, "w") as json_file:
         json.dump(data, json_file)
 
