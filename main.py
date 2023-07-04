@@ -16,7 +16,7 @@ import time
 import json
 import os
 
-num_pages = 3  # number of pages
+num_pages = 150  # number of pages
 all_tables = []
 for i in range(1, num_pages):
     print(i)
