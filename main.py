@@ -27,6 +27,7 @@ for i in range(1, num_pages):
 
     tables = pd.read_html(response.content)
     tables = [table.drop(table.columns[0], axis=1) for table in tables]
+    tables = [table.drop(table.columns[1], axis=1) for table in tables]
     table = tables[0][pd.to_numeric(tables[0]['Downloads'], errors="coerce").notna()]
     all_tables.append(table)
     time.sleep(0.5)
@@ -39,6 +40,7 @@ for index, row in combined_table.iterrows():
     data = row.to_dict()
     plugin_name = data[list(data.keys())[0]]
     plugin_name = plugin_name.replace('/', '_')
+    plugin_name = plugin_name.replace(' ', '_')
     filename = f"jsons/{plugin_name}.json"
     with open(filename, "w") as json_file:
         json.dump(data, json_file)
