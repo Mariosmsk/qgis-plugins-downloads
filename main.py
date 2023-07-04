@@ -19,7 +19,6 @@ import os
 num_pages = 150  # number of pages
 all_tables = []
 for i in range(1, num_pages):
-    print(i)
     url = f"https://plugins.qgis.org/plugins/?page={i}&sort=name&"
 
     response = requests.get(url)
