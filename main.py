@@ -49,6 +49,7 @@ for index, row in combined_table.iterrows():
     plugin_name = data[list(data.keys())[0]]
     plugin_name = plugin_name.replace('/', '_')
     plugin_name = plugin_name.replace(' ', '_')
+    plugin_name = plugin_name.replace('-', '_')
     plugin_download = row['Downloads']
     author = data['Author']
     latest_update = data['Latest Plugin Version']
