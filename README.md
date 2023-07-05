@@ -10,37 +10,37 @@ Daily updated!
 
 Badge examples: 
 
-![ImportPhotos Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=ImportPhotos-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/ImportPhotos.json)
+![ImportPhotos Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=ImportPhotos-downloads&query=%24.ImportPhotos.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![ImportPhotos Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=ImportPhotos-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/ImportPhotos.json)
+![ImportPhotos Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=ImportPhotos-downloads&query=%24.ImportPhotos.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
 
-![QuickOSM Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QuickOSM-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QuickOSM.json)
+![QuickOSM Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QuickOSM-downloads&query=%24.QuickOSM.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![QuickOSM Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QuickOSM-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QuickOSM.json)
+![QuickOSM Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QuickOSM-downloads&query=%24.QuickOSM.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
 
-![QChatGPT Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QChatGPT-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QChatGPT.json)
+![QChatGPT Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QChatGPT-downloads&query=%24.QChatGPT.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![QChatGPT Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QChatGPT-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QChatGPT.json)
+![QChatGPT Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QChatGPT-downloads&query=%24.QChatGPT.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
 
-![qgis2web Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=qgis2web-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/qgis2web.json)
+![qgis2web Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=qgis2web-downloads&query=%24.qgis2web.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![qgis2web Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=qgis2web-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/qgis2web.json)
+![qgis2web Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=qgis2web-downloads&query=%24.qgis2web.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
 
-![QWeather Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QWeather-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QWeather.json)
+![QWeather Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QWeather-downloads&query=%24.QWeather.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![QWeather Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QWeather-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/QWeather.json)
+![QWeather Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=QWeather-downloads&query=%24.QWeather.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
-![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/A-Maps.json)
+![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.A-Maps.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.Downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/jsons/A-Maps.json)
+![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.A-Maps.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
