@@ -42,5 +42,5 @@ Badge examples:
 ![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.A-Maps.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 
 ```md
-![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.A-Maps.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
+![A-Maps Downloads](https://img.shields.io/badge/dynamic/json?formatter=metric&color=green&label=A-Maps-downloads&query=%24.A_Maps.downloads&url=https://raw.githubusercontent.com/Mariosmsk/qgis-plugins-downloads/main/data/plugins.json)
 ```
