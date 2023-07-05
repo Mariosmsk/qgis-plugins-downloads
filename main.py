@@ -16,7 +16,7 @@ import time
 import json
 import os
 
-num_pages = 150 # number of pages
+num_pages = 150  # number of pages
 
 # Read all plugin information
 all_tables = []
@@ -79,7 +79,10 @@ with open(filename_plugins, "w") as json_file:
 df_ts = pd.DataFrame(plugin_data_ts)
 
 filename_ts_plugins = f"data/plugins_time_series.csv"
-df_pivot = df_ts.pivot(index="plugin_name", columns="date", values="downloads")
+duplicates = df_ts.duplicated(subset='plugin_name', keep=False)
+df_ts.loc[duplicates, 'plugin_name'] = df_ts.loc[duplicates, 'plugin_name'] + '_' + \
+                                       df_ts.groupby('plugin_name').cumcount().astype(str)
+df_pivot = df_ts.pivot(index='plugin_name', columns='date', values='downloads')
 if not os.path.exists(filename_ts_plugins):
     df_pivot.to_csv(filename_ts_plugins)
 
