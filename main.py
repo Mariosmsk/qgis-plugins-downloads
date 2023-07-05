@@ -42,7 +42,7 @@ combined_table = pd.concat(all_tables, ignore_index=True)
 os.makedirs("data", exist_ok=True)
 
 # Create lists with plugin information
-plugin_data = []
+plugin_data = {}
 plugin_data_ts = []
 for index, row in combined_table.iterrows():
     data = row.to_dict()
@@ -55,15 +55,14 @@ for index, row in combined_table.iterrows():
     stars = data['Stars (votes)']
     stars = stars.replace('(', '')
     stars = stars.replace(')', '')
-    pl = {
-        "plugin_name": plugin_name,
+    plugin_data[f"{plugin_name}"] = {
         "author": author,
         "latest_update": latest_update,
         "downloads": plugin_download,
         "stars": stars,
         "date": datetime_string
     }
-    plugin_data.append(pl)
+
     pl_ts = {
         "plugin_name": plugin_name,
         "downloads": plugin_download,
@@ -76,35 +75,30 @@ filename_plugins = f"data/plugins.json"
 with open(filename_plugins, "w") as json_file:
     json.dump(plugin_data, json_file)
 
-# Create the `plugins.csv` file / the latest information
-df = pd.DataFrame(plugin_data)
-df.to_csv("data/plugins.csv", index=False)
-
 # Make the date columns
 df_ts = pd.DataFrame(plugin_data_ts)
-df_pivot = df.pivot(index="plugin_name", columns="date", values="downloads")
 
 filename_ts_plugins = f"data/plugins_time_series.csv"
+df_pivot = df_ts.pivot(index="plugin_name", columns="date", values="downloads")
 if not os.path.exists(filename_ts_plugins):
     df_pivot.to_csv(filename_ts_plugins)
 
 existing_data = pd.read_csv(filename_ts_plugins)
 
 # Add the missing plugins in the file
-last_plugins = set(df['plugin_name'])
+last_plugins = set(plugin_data.keys())
 existing_plugins = set(existing_data['plugin_name'])
 missing_plugins = []
 if last_plugins == existing_plugins:
     pass
 else:
     missing_plugins = last_plugins - existing_plugins
-
-for plugin in missing_plugins:
-    index = df['plugin_name'].tolist().index(plugin)
-    new_row = {"plugin_name": plugin, f"{datetime_string}": df['downloads'][index]}
-    existing_data = pd.concat([existing_data, pd.DataFrame([new_row])], ignore_index=True)
+    for plugin in missing_plugins:
+        new_row = {"plugin_name": plugin, f"{datetime_string}": plugin_data[plugin]['downloads']}
+        existing_data = pd.concat([existing_data, pd.DataFrame([new_row])], ignore_index=True)
 
 # Update the file `plugins_time_series.csv`
-merged_df = pd.merge(existing_data, df_pivot, on='plugin_name', how='inner')
+existing_data = existing_data.rename(columns={'downloads': f'{datetime_string}'})
+df_pivot.drop(columns=[datetime_string], inplace=True)
+merged_df = pd.merge(df_pivot, existing_data[['plugin_name', datetime_string]], on='plugin_name', how='inner', suffixes=('', '_y'))
 merged_df.to_csv(filename_ts_plugins, index=False)
-
