@@ -104,4 +104,5 @@ else:
 # Update the file `plugins_time_series.csv`
 existing_data = existing_data.rename(columns={'downloads': f'{datetime_string}'})
 merged_df = pd.merge(df_pivot, existing_data, on='plugin_name', how='inner', suffixes=('', '_y'))
+merged_df = merged_df.loc[:, ~merged_df.columns.str.endswith('_y')]
 merged_df.to_csv(filename_ts_plugins, index=False)
