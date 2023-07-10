@@ -4,8 +4,8 @@ The purpose of this repository is to store daily downloaded QGIS plugins.
 
 Daily updated! 
 
-- data/plugins.json
-- data/plugins_time_series.csv
+- [data/plugins.json](https://github.com/Mariosmsk/qgis-plugins-downloads/blob/main/data/plugins.json)
+- [data/plugins_time_series.csv](https://github.com/Mariosmsk/qgis-plugins-downloads/blob/main/data/plugins_time_series.csv)
 
 
 Badge examples: 
