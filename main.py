@@ -74,7 +74,7 @@ for index, row in combined_table.iterrows():
 # Create the `plugins.json` file / the latest information
 filename_plugins = f"data/plugins.json"
 with open(filename_plugins, "w") as json_file:
-    json.dump(plugin_data, json_file)
+    json.dump(plugin_data, json_file, indent=4)
 
 # Make the date columns
 df_ts = pd.DataFrame(plugin_data_ts)
