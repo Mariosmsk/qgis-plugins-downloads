@@ -42,7 +42,7 @@ combined_table = pd.concat(all_tables, ignore_index=True)
 os.makedirs("data", exist_ok=True)
 
 # Create lists with plugin information
-plugin_data = {}
+plugin_data = {"date": datetime_string}
 plugin_data_ts = []
 for index, row in combined_table.iterrows():
     data = row.to_dict()
@@ -61,7 +61,6 @@ for index, row in combined_table.iterrows():
         "latest_update": latest_update,
         "downloads": plugin_download,
         "stars": stars,
-        "date": datetime_string
     }
 
     pl_ts = {
@@ -91,6 +90,7 @@ existing_data = pd.read_csv(filename_ts_plugins)
 
 # Add the missing plugins in the file
 last_plugins = set(plugin_data.keys())
+last_plugins.remove('date')
 existing_plugins = set(existing_data['plugin_name'])
 missing_plugins = []
 if last_plugins == existing_plugins:
